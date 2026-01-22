@@ -69,13 +69,6 @@ public class Lista {
         }
         size++;
     }
-
-    public String visita() {
-        if (cursor != null) {
-            return cursor.getValue();
-        }
-        return null;
-    }
 }
 
 
