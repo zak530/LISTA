@@ -77,6 +77,23 @@ public class Lista {
     }
 
 
+
+
+    public String visita() {
+        if (cursor == null) {
+            cursor = head;
+        }
+        if (cursor == null) {
+            return null;
+        }
+        String valore = cursor.getValue();
+        cursor = cursor.getNext();
+        return valore;
+    }
+
+
+
+
     public String lettura(int index) {
         if (index < 0 || index >= size) {
             return null;
@@ -100,7 +117,7 @@ public class Lista {
             current = current.getNext();
             index++;
         }
-        return -1; // Non trovato
+        return -1;
     }
 
 
