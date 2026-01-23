@@ -69,6 +69,14 @@ public class Lista {
         }
         size++;
     }
+
+
+    public void eliminazionecompleta(){
+        head = null;
+        size = 0;
+    }
+
+
 }
 
 

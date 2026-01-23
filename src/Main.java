@@ -7,7 +7,6 @@ public class Main {
         lista.inserimento("C", 2);
         lista.inserimento("D",3);
 
-        lista.accoda(4);
 
         lista.eliminazione(1);
 
