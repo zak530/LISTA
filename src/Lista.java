@@ -121,8 +121,14 @@ public class Lista {
     }
 
 
-
-
+    @Override
+    public String toString() {
+        return "Lista{" +
+                "size=" + size +
+                ", head=" + head +
+                ", cursor=" + cursor +
+                '}';
+    }
 }
 
 
