@@ -10,6 +10,8 @@ public class Main {
 
         lista.eliminazione(1);
 
+        lista.eliminazionecompleta();
+
         Nodo current = lista.getHead();
         while (current != null) {
             System.out.println(current.getValue());

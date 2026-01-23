@@ -77,6 +77,19 @@ public class Lista {
     }
 
 
+    public String lettura(int index) {
+        if (index < 0 || index >= size) {
+            return null;
+        }
+        Nodo current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.getNext();
+        }
+        return current.getValue();
+    }
+
+
+
 }
 
 
