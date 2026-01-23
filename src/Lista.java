@@ -90,6 +90,22 @@ public class Lista {
 
 
 
+    public int ricerca(String valore) {
+        Nodo current = head;
+        int index = 0;
+        while (current != null) {
+            if (current.getValue().equals(valore)) {
+                return index;
+            }
+            current = current.getNext();
+            index++;
+        }
+        return -1; // Non trovato
+    }
+
+
+
+
 }
 
 
