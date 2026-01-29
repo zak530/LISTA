@@ -98,10 +98,26 @@ public class Lista {
     }
 
 
-    public void eliminazionecompleta(){
-        head = null;
-        size = 0;
+    public void eliminazioneCompleta(int valore) {
+
+        while (head != null && head.getValueint() == valore) {
+            head = head.getNext();
+            size--;
+        }
+
+        Nodo current = head;
+
+        while (current.getNext() != null) {
+            if (current.getNext().getValueint() == valore) {
+                current.setNext(current.getNext().getNext());
+                size--;
+            } else {
+                current = current.getNext();
+            }
+        }
     }
+
+
 
 
 
