@@ -32,6 +32,7 @@ public class Lista {
     public void inserimentoordinato(int valueint) {
         Nodo newNode = new Nodo();
         newNode.setValueint(valueint);
+        newNode.setValue(String.valueOf(valueint));
         if (head == null || valueint < head.getValueint()) {
             newNode.setNext(head);
             head = newNode;
