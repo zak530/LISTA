@@ -25,6 +25,50 @@ public class Lista {
         this.cursor = cursor;
     }
 
+
+
+
+
+    public void inserimentoordinato(int valueint){
+        Nodo newNode = new Nodo();
+        newNode.setValueint(valueint);
+        if (valueint == 0 ) {
+            newNode.setNext(head);
+            head = newNode;
+        } else {
+            Nodo current = head;
+            for (int i = 0; i < valueint - 1; i++) {
+                current = current.getNext();
+            }
+            newNode.setNext(current.getNext());
+            current.setNext(newNode);
+        }
+        size++;
+    }
+
+
+
+
+
+
+
+
+
+
+    public void eliminazione(int index) {
+        if (index == 0) {
+            head = head.getNext();
+        } else {
+            Nodo current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.getNext();
+            }
+            current.setNext(current.getNext().getNext());
+        }
+        size--;
+    }
+
+
     public void inserimento(String value, int index) {
         Nodo newNode = new Nodo();
         newNode.setValue(value);
@@ -42,18 +86,7 @@ public class Lista {
         size++;
     }
 
-    public void eliminazione(int index) {
-        if (index == 0) {
-            head = head.getNext();
-        } else {
-            Nodo current = head;
-            for (int i = 0; i < index - 1; i++) {
-                current = current.getNext();
-            }
-            current.setNext(current.getNext().getNext());
-        }
-        size--;
-    }
+
 
     public void accoda(int value) {
         Nodo newNode = new Nodo();

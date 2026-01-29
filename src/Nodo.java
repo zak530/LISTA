@@ -1,10 +1,16 @@
 public class Nodo {
         private String value;
         private Nodo next;
+        private int valueint;
 
         public Nodo(String value) {
             this.value = value;
             this.next = null;
+        }
+
+        public Nodo(int valueint) {
+        this.valueint = valueint;
+        this.next = null;
         }
 
         public Nodo() {
@@ -28,12 +34,13 @@ public class Nodo {
             this.value = value;
         }
 
+        public void setValueint(int valueint) {
+        this.valueint = valueint;
+        }
 
     @Override
-    public String toString() {
-        return "Nodo{" +
-                "value='" + value +
-                ", next=" + next +
-                '}';
-    }
+        public String toString() {
+            return "Nodo{" +
+                    "value='" + value +", next=" + next + '}';
+        }
 }
