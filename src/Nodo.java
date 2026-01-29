@@ -38,6 +38,10 @@ public class Nodo {
         this.valueint = valueint;
         }
 
+        public int getValueint(){
+            return valueint;
+        }
+
     @Override
         public String toString() {
             return "Nodo{" +

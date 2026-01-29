@@ -29,29 +29,23 @@ public class Lista {
 
 
 
-    public void inserimentoordinato(int valueint){
+    public void inserimentoordinato(int valueint) {
         Nodo newNode = new Nodo();
         newNode.setValueint(valueint);
-        if (valueint == 0 ) {
+        if (head == null || valueint < head.getValueint()) {
             newNode.setNext(head);
             head = newNode;
         } else {
             Nodo current = head;
-            for (int i = 0; i < valueint - 1; i++) {
+            while (current.getNext() != null && current.getNext().getValueint() < valueint) {
                 current = current.getNext();
             }
             newNode.setNext(current.getNext());
             current.setNext(newNode);
         }
+
         size++;
     }
-
-
-
-
-
-
-
 
 
 
